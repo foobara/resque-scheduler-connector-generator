@@ -1,8 +1,8 @@
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
+    module ResqueConnectorGenerator
       module Generators
-        class BinExecutableGenerator < ShCliConnectorGenerator
+        class BinExecutableGenerator < ResqueConnectorGenerator
           def template_path
             ["bin", "cli.erb"]
           end

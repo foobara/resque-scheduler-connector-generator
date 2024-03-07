@@ -1,10 +1,10 @@
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
+    module ResqueConnectorGenerator
       module Generators
         # Kind of tricky... for the first time we will be loading an existing file in the working directory
         # and modifying it.
-        class GemspecGenerator < ShCliConnectorGenerator
+        class GemspecGenerator < ResqueConnectorGenerator
           def template_path
             Dir["*.gemspec"].first
           end

@@ -1,4 +1,4 @@
-RSpec.describe Foobara::Generators::ShCliConnectorGenerator::GenerateShCliConnector do
+RSpec.describe Foobara::Generators::ResqueConnectorGenerator::GenerateResqueConnector do
   let(:name) { "some-cli" }
 
   let(:inputs) do

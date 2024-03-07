@@ -1,12 +1,12 @@
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
+    module ResqueConnectorGenerator
       module Generators
-        class ShCliConnectorGenerator < Foobara::FilesGenerator
+        class ResqueConnectorGenerator < Foobara::FilesGenerator
           class << self
             def manifest_to_generator_classes(manifest)
               case manifest
-              when ShCliConnectorConfig
+              when ResqueConnectorConfig
                 [
                   Generators::BinExecutableGenerator,
                   Generators::GemfileGenerator,

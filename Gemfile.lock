@@ -34,7 +34,7 @@ GIT
 PATH
   remote: .
   specs:
-    foobara-sh-cli-connector-generator (0.0.1)
+    foobara-resque-connector-generator (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -146,7 +146,7 @@ DEPENDENCIES
   foobara!
   foobara-files-generator!
   foobara-rubocop-rules!
-  foobara-sh-cli-connector-generator!
+  foobara-resque-connector-generator!
   foobara-spec-helpers!
   foobara-util!
   guard-rspec

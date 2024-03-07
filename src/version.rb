@@ -1,6 +1,6 @@
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
+    module ResqueConnectorGenerator
       VERSION = "0.0.1".freeze
     end
   end

@@ -43,7 +43,7 @@ push git commits and the created tag, and push the `.gem` file to [rubygems.org]
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub
-at https://github.com/[USERNAME]/foobara-sh-cli-connector-generator.
+at https://github.com/[USERNAME]/foobara-resque-connector-generator.
 
 ## License
 

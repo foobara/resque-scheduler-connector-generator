@@ -4,13 +4,13 @@ require_relative "resque_connector_config"
 
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
-      class GenerateShCliConnector < Foobara::Generators::Generate
+    module ResqueConnectorGenerator
+      class GenerateResqueConnector < Foobara::Generators::Generate
         class MissingManifestError < RuntimeError; end
 
         possible_error MissingManifestError
 
-        inputs ShCliConnectorConfig
+        inputs ResqueConnectorConfig
 
         def execute
           add_initial_elements_to_generate
@@ -25,7 +25,7 @@ module Foobara
         attr_accessor :manifest_data
 
         def base_generator
-          Generators::ShCliConnectorGenerator
+          Generators::ResqueConnectorGenerator
         end
 
         # TODO: delegate this to base_generator
@@ -41,7 +41,7 @@ module Foobara
         end
 
         def resque_connector_config
-          @resque_connector_config ||= ShCliConnectorConfig.new(inputs)
+          @resque_connector_config ||= ResqueConnectorConfig.new(inputs)
         end
       end
     end

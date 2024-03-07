@@ -1,4 +1,4 @@
-RSpec.describe Foobara::Generators::ShCliConnectorGenerator::WriteShCliConnectorToDisk do
+RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnectorToDisk do
   let(:command) { described_class.new(inputs) }
   let(:outcome) { command.run }
   let(:result) { outcome.result }
@@ -46,7 +46,7 @@ RSpec.describe Foobara::Generators::ShCliConnectorGenerator::WriteShCliConnector
 
       expect(
         command.paths_to_source_code["Gemfile"]
-      ).to include('gem "foobara-sh-cli-connector", github: "foobara/sh-cli-connector"')
+      ).to include('gem "foobara-resque-connector", github: "foobara/resque-connector"')
     end
 
     it "updates the .gemspec to add to the list of executables" do

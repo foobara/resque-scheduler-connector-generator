@@ -2,8 +2,8 @@ require "English"
 
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
-      class ShCliConnectorConfig < Foobara::Model
+    module ResqueConnectorGenerator
+      class ResqueConnectorConfig < Foobara::Model
         attributes do
           name :string, :required
         end

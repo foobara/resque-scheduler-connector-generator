@@ -50,10 +50,10 @@ GIT
       rubocop-rspec
 
 GIT
-  remote: https://github.com/foobara/sh-cli-connector.git
+  remote: https://github.com/foobara/resque-connector.git
   revision: 78ff61ace804add30060043b663f48e5fc39fa3f
   specs:
-    foobara-sh-cli-connector (0.1.0)
+    foobara-resque-connector (0.1.0)
 
 GIT
   remote: https://github.com/foobara/spec-helpers.git
@@ -187,7 +187,7 @@ DEPENDENCIES
   foobara-foob!
   foobara-organization-generator!
   foobara-rubocop-rules!
-  foobara-sh-cli-connector!
+  foobara-resque-connector!
   foobara-spec-helpers!
   foobara-util!
   guard-rspec

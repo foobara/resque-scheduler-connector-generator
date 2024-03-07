@@ -1,10 +1,10 @@
 module Foobara
   module Generators
-    module ShCliConnectorGenerator
+    module ResqueConnectorGenerator
       module Generators
         # Kind of tricky... for the first time we will be loading an existing file in the working directory
         # and modifying it.
-        class GemfileGenerator < ShCliConnectorGenerator
+        class GemfileGenerator < ResqueConnectorGenerator
           def template_path
             "Gemfile"
           end
@@ -19,7 +19,7 @@ module Foobara
             match = contents.match(/^gem /)
 
             if match
-              new_entry = 'gem "foobara-sh-cli-connector", github: "foobara/sh-cli-connector"'
+              new_entry = 'gem "foobara-resque-connector", github: "foobara/resque-connector"'
               "#{match.pre_match}\n#{new_entry}\n#{match}#{match.post_match}"
             else
               # TODO: maybe print a warning and return the original Gemfile
