@@ -24,7 +24,7 @@ module Foobara
             else
               # TODO: maybe print a warning and return the original Gemfile
               # :nocov:
-              raise "Not sure how to inject sh_cli_connector into the Gemfile"
+              raise "Not sure how to inject resque_connector into the Gemfile"
               # :nocov:
             end
           end

@@ -5,17 +5,17 @@ RSpec.describe Foobara::Generators::ShCliConnectorGenerator::WriteShCliConnector
   let(:errors) { outcome.errors }
   let(:inputs) do
     {
-      sh_cli_connector_config:,
+      resque_connector_config:,
       output_directory:
     }
   end
-  let(:sh_cli_connector_config) do
+  let(:resque_connector_config) do
     {
       name:
     }
   end
   let(:name) { "some-cli" }
-  let(:output_directory) { "#{__dir__}/../../../tmp/sh_cli_connector_test_suite_output" }
+  let(:output_directory) { "#{__dir__}/../../../tmp/resque_connector_test_suite_output" }
 
   around do |example|
     FileUtils.rm_rf output_directory
@@ -62,7 +62,7 @@ RSpec.describe Foobara::Generators::ShCliConnectorGenerator::WriteShCliConnector
     context "with no output directory" do
       let(:inputs) do
         {
-          sh_cli_connector_config:
+          resque_connector_config:
         }
       end
 

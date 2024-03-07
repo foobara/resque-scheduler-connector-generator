@@ -10,7 +10,7 @@ RSpec.describe Foobara::Generators::ShCliConnectorGenerator::GenerateShCliConnec
   let(:outcome) { command.run }
   let(:result) { outcome.result }
 
-  it "generates a sh_cli_connector" do
+  it "generates a resque_connector" do
     expect(outcome).to be_success
 
     expect(result.keys).to include("bin/some-cli")

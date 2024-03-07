@@ -1,4 +1,4 @@
-require_relative "generate_sh_cli_connector"
+require_relative "generate_resque_connector"
 
 module Foobara
   module Generators
@@ -6,14 +6,14 @@ module Foobara
       class WriteShCliConnectorToDisk < Foobara::Generators::WriteGeneratedFilesToDisk
         class << self
           def generator_key
-            "sh_cli_connector"
+            "resque_connector"
           end
         end
 
         depends_on GenerateShCliConnector
 
         inputs do
-          sh_cli_connector_config ShCliConnectorConfig, :required
+          resque_connector_config ShCliConnectorConfig, :required
           # TODO: should be able to delete this and inherit it
           output_directory :string
         end
@@ -37,8 +37,8 @@ module Foobara
         end
 
         def generate_file_contents
-          # TODO: just pass this in as the inputs instead of the sh_cli_connector??
-          self.paths_to_source_code = run_subcommand!(GenerateShCliConnector, sh_cli_connector_config.attributes)
+          # TODO: just pass this in as the inputs instead of the resque_connector??
+          self.paths_to_source_code = run_subcommand!(GenerateShCliConnector, resque_connector_config.attributes)
         end
 
         def run_post_generation_tasks

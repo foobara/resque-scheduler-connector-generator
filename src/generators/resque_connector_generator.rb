@@ -20,7 +20,7 @@ module Foobara
             end
           end
 
-          alias sh_cli_connector_config relevant_manifest
+          alias resque_connector_config relevant_manifest
 
           def templates_dir
             "#{__dir__}/../../templates"
@@ -29,12 +29,12 @@ module Foobara
           # TODO: promote this up to base project
           def ==(other)
             # :nocov:
-            self.class == other.class && sh_cli_connector_config == other.sh_cli_connector_config
+            self.class == other.class && resque_connector_config == other.resque_connector_config
             # :nocov:
           end
 
           def hash
-            sh_cli_connector_config.hash
+            resque_connector_config.hash
           end
         end
       end

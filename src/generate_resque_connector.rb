@@ -1,6 +1,6 @@
 require "pathname"
 
-require_relative "sh_cli_connector_config"
+require_relative "resque_connector_config"
 
 module Foobara
   module Generators
@@ -37,11 +37,11 @@ module Foobara
         end
 
         def add_initial_elements_to_generate
-          elements_to_generate << sh_cli_connector_config
+          elements_to_generate << resque_connector_config
         end
 
-        def sh_cli_connector_config
-          @sh_cli_connector_config ||= ShCliConnectorConfig.new(inputs)
+        def resque_connector_config
+          @resque_connector_config ||= ShCliConnectorConfig.new(inputs)
         end
       end
     end
