@@ -51,7 +51,9 @@ module Foobara
           Open3.popen3("bundle exec rubocop -A") do |_stdin, _stdout, stderr, wait_thr|
             exit_status = wait_thr.value
             unless exit_status.success?
+              # :nocov:
               warn "WARNING: could not rubocop -A. #{stderr.read}"
+              # :nocov:
             end
           end
         end

@@ -4,8 +4,7 @@ module Foobara
   module Generators
     module ResqueConnectorGenerator
       class ResqueConnectorConfig < Foobara::Model
-        attributes do
-        end
+        attributes({})
       end
     end
   end

@@ -13,6 +13,8 @@ module Foobara
         inputs ResqueConnectorConfig
 
         def execute
+          include_non_templated_files
+
           add_initial_elements_to_generate
 
           each_element_to_generate do

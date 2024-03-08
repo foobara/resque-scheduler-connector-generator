@@ -35,7 +35,7 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
     it "contains base files" do
       expect(outcome).to be_success
 
-      expect(command.paths_to_source_code.keys).to include("bin/some-cli")
+      expect(command.paths_to_source_code.keys).to include("boot/resque.rb")
     end
 
     it "updates the Gemfile" do
@@ -44,14 +44,6 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
       expect(
         command.paths_to_source_code["Gemfile"]
       ).to include('gem "foobara-resque-connector", github: "foobara/resque-connector"')
-    end
-
-    it "updates the .gemspec to add to the list of executables" do
-      expect(outcome).to be_success
-
-      expect(
-        command.paths_to_source_code["test-org-test-domain.gemspec"]
-      ).to include('spec.executables += ["some-cli"]')
     end
   end
 

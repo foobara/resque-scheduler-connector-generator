@@ -8,7 +8,6 @@ module Foobara
               case manifest
               when ResqueConnectorConfig
                 [
-                  Generators::ResqueConnectorGenerator,
                   Generators::GemfileGenerator
                 ]
               else
@@ -22,7 +21,9 @@ module Foobara
           alias resque_connector_config relevant_manifest
 
           def templates_dir
+            # :nocov:
             "#{__dir__}/../../templates"
+            # :nocov:
           end
 
           # TODO: promote this up to base project
