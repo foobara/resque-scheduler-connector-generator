@@ -1,18 +1,18 @@
-RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnectorToDisk do
+RSpec.describe Foobara::Generators::ResqueSchedulerConnectorGenerator::WriteResqueSchedulerConnectorToDisk do
   let(:command) { described_class.new(inputs) }
   let(:outcome) { command.run }
   let(:result) { outcome.result }
   let(:errors) { outcome.errors }
   let(:inputs) do
     {
-      resque_connector_config:,
+      resque_scheduler_connector_config:,
       output_directory:
     }
   end
-  let(:resque_connector_config) do
+  let(:resque_scheduler_connector_config) do
     {}
   end
-  let(:output_directory) { "#{__dir__}/../../../tmp/resque_connector_test_suite_output" }
+  let(:output_directory) { "#{__dir__}/../../../tmp/resque_scheduler_connector_test_suite_output" }
 
   around do |example|
     FileUtils.rm_rf output_directory
@@ -43,7 +43,7 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
 
       expect(
         command.paths_to_source_code["Gemfile"]
-      ).to include('gem "foobara-resque-connector", github: "foobara/resque-connector"')
+      ).to include('gem "foobara-resque-scheduler-connector", github: "foobara/resque-scheduler-connector"')
     end
   end
 
@@ -51,7 +51,7 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
     context "with no output directory" do
       let(:inputs) do
         {
-          resque_connector_config:
+          resque_scheduler_connector_config:
         }
       end
 

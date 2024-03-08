@@ -1,13 +1,13 @@
 require_relative "src/version"
 
 Gem::Specification.new do |spec|
-  spec.name = "foobara-resque-connector-generator"
-  spec.version = Foobara::Generators::ResqueConnectorGenerator::VERSION
+  spec.name = "foobara-resque-scheduler-connector-generator"
+  spec.version = Foobara::Generators::ResqueSchedulerConnectorGenerator::VERSION
   spec.authors = ["Miles Georgi"]
   spec.email = ["azimux@gmail.com"]
 
-  spec.summary = "Generates a Foobara resque_connector"
-  spec.homepage = "https://github.com/foobara/generators-resque-connector-generator"
+  spec.summary = "Generates a Foobara resque_scheduler_connector"
+  spec.homepage = "https://github.com/foobara/generators-resque-scheduler-connector-generator"
   spec.license = "MIT"
   spec.required_ruby_version = ">= #{File.read("#{__dir__}/.ruby-version")}"
 

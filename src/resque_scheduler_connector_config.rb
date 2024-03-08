@@ -2,8 +2,8 @@ require "English"
 
 module Foobara
   module Generators
-    module ResqueConnectorGenerator
-      class ResqueConnectorConfig < Foobara::Model
+    module ResqueSchedulerConnectorGenerator
+      class ResqueSchedulerConnectorConfig < Foobara::Model
         attributes({})
       end
     end

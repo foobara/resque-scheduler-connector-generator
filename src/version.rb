@@ -1,6 +1,6 @@
 module Foobara
   module Generators
-    module ResqueConnectorGenerator
+    module ResqueSchedulerConnectorGenerator
       VERSION = "0.0.1".freeze
     end
   end

@@ -35,4 +35,4 @@ RSpec.configure do |config|
 end
 
 require "foobara/spec_helpers/all"
-require "foobara/resque_connector_generator"
+require "foobara/resque_scheduler_connector_generator"
