@@ -5,7 +5,6 @@ module Foobara
     module ResqueConnectorGenerator
       class ResqueConnectorConfig < Foobara::Model
         attributes do
-          name :string, :required
         end
       end
     end

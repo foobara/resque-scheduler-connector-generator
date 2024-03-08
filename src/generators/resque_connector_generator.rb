@@ -8,9 +8,8 @@ module Foobara
               case manifest
               when ResqueConnectorConfig
                 [
-                  Generators::BinExecutableGenerator,
-                  Generators::GemfileGenerator,
-                  Generators::GemspecGenerator
+                  Generators::ResqueConnectorGenerator,
+                  Generators::GemfileGenerator
                 ]
               else
                 # :nocov:

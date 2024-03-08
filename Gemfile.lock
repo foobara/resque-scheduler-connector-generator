@@ -145,8 +145,8 @@ PLATFORMS
 DEPENDENCIES
   foobara!
   foobara-files-generator!
-  foobara-rubocop-rules!
   foobara-resque-connector-generator!
+  foobara-rubocop-rules!
   foobara-spec-helpers!
   foobara-util!
   guard-rspec

@@ -1,10 +1,6 @@
 RSpec.describe Foobara::Generators::ResqueConnectorGenerator::GenerateResqueConnector do
-  let(:name) { "some-cli" }
-
   let(:inputs) do
-    {
-      name:
-    }
+    {}
   end
   let(:command) { described_class.new(inputs) }
   let(:outcome) { command.run }
@@ -13,6 +9,6 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::GenerateResqueConn
   it "generates a resque_connector" do
     expect(outcome).to be_success
 
-    expect(result.keys).to include("bin/some-cli")
+    expect(result.keys).to include("boot/resque.rb")
   end
 end

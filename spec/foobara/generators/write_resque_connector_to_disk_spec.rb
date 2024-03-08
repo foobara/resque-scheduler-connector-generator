@@ -10,11 +10,8 @@ RSpec.describe Foobara::Generators::ResqueConnectorGenerator::WriteResqueConnect
     }
   end
   let(:resque_connector_config) do
-    {
-      name:
-    }
+    {}
   end
-  let(:name) { "some-cli" }
   let(:output_directory) { "#{__dir__}/../../../tmp/resque_connector_test_suite_output" }
 
   around do |example|
