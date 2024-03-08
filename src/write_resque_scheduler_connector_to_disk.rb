@@ -6,7 +6,7 @@ module Foobara
       class WriteResqueSchedulerConnectorToDisk < Foobara::Generators::WriteGeneratedFilesToDisk
         class << self
           def generator_key
-            "resque_scheduler_connector"
+            "resque-scheduler-connector"
           end
         end
 
