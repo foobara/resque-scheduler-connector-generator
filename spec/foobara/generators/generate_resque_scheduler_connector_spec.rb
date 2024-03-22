@@ -9,6 +9,6 @@ RSpec.describe Foobara::Generators::ResqueSchedulerConnectorGenerator::GenerateR
   it "generates a resque_scheduler_connector" do
     expect(outcome).to be_success
 
-    expect(result.keys).to include("boot/resque_scheduler.rb")
+    expect(result.keys).to contain_exactly("boot/resque_scheduler.rb", "Procfile", "Gemfile")
   end
 end
