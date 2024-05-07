@@ -13,7 +13,7 @@ module Foobara
         depends_on GenerateResqueSchedulerConnector
 
         inputs do
-          resque_scheduler_connector_config ResqueSchedulerConnectorConfig, :required
+          resque_scheduler_connector_config ResqueSchedulerConnectorConfig, default: ResqueSchedulerConnectorConfig.new
           # TODO: should be able to delete this and inherit it
           output_directory :string
         end
