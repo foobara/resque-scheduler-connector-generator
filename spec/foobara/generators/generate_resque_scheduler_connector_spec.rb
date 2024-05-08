@@ -18,7 +18,7 @@ RSpec.describe Foobara::Generators::ResqueSchedulerConnectorGenerator::GenerateR
     expect(outcome).to be_success
 
     expect(result.keys).to contain_exactly(
-      "boot/resque_scheduler.rb",
+      "boot/cron.rb",
       "Procfile",
       "Gemfile",
       "test-org-test-domain.gemspec"
