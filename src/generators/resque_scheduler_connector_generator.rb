@@ -9,6 +9,7 @@ module Foobara
               when ResqueSchedulerConnectorConfig
                 [
                   Generators::GemfileGenerator,
+                  Generators::GemspecGenerator,
                   Generators::ProcfileGenerator
                 ]
               else

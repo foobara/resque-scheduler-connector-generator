@@ -6,9 +6,22 @@ RSpec.describe Foobara::Generators::ResqueSchedulerConnectorGenerator::GenerateR
   let(:outcome) { command.run }
   let(:result) { outcome.result }
 
+  around do |example|
+    project_fixture_dir = "#{__dir__}/../../fixtures/test-project"
+
+    Dir.chdir project_fixture_dir do
+      example.run
+    end
+  end
+
   it "generates a resque_scheduler_connector" do
     expect(outcome).to be_success
 
-    expect(result.keys).to contain_exactly("boot/resque_scheduler.rb", "Procfile", "Gemfile")
+    expect(result.keys).to contain_exactly(
+      "boot/resque_scheduler.rb",
+      "Procfile",
+      "Gemfile",
+      "test-org-test-domain.gemspec"
+    )
   end
 end
