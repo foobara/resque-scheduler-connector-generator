@@ -21,7 +21,8 @@ RSpec.describe Foobara::Generators::ResqueSchedulerConnectorGenerator::GenerateR
       "boot/cron.rb",
       "Procfile",
       "Gemfile",
-      "test-org-test-domain.gemspec"
+      "test-org-test-domain.gemspec",
+      "Rakefile"
     )
   end
 end
