@@ -6,7 +6,7 @@ module Foobara
         # and modifying it.
         class GemspecGenerator < ResqueSchedulerConnectorGenerator
           def applicable?
-            gemspec_contents !~ /^\sspec.add_dependency\s*['"]resque-scheduler['"]/
+            gemspec_contents !~ /^\s*spec.add_dependency\s*['"]resque-scheduler['"]/
           end
 
           def template_path
